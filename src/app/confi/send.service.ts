@@ -7,7 +7,7 @@ import { Injectable } from '@angular/core';
 })
 export class SendService {
 
-  private baseurl ="https://livesopport.net:1900/"
+  private baseurl ="https://livesopport.net:1900"
   constructor(
     private httpx:HttpClient
   ) { }
