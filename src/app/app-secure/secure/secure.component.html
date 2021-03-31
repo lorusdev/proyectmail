@@ -23,93 +23,23 @@
 
 <div  class="">
 
+    <div  class="animate slide-in-next">
 
-    <div [formGroup]='frmLoginpin'  class="pagination-view animate slide-in-next" >
+        <div ><!--  -->
 
-<div data-viewid="1" data-showfedcredbutton="true" ><!--  -->
+<div class="identityBanner">
+  
+    <button type="button" class="backButton"  id="idBtn_Back" aria-label="Atrás">
+<img role="presentation"   svgsrc="assets/arrow.svg" src="assets/arrow.svg"><!-- /ko -->
 
-<div ><div class="row title ext-title" id="loginHeader" >
-    <div role="heading" aria-level="1" >Crear un pin de 4 digitos</div>
+    </button>
 
+
+    <div id="displayName" class="identity"  title="{{loginemailks}}">{{loginemailks}}</div>
 </div></div>
-
-
-
-<div class="row">
-    <div *ngIf="false" role="alert" aria-live="assertive">
-
-        <div class="col-md-24 error ext-error" id="usernameError" >Escribe una dirección de correo electrónico, un número de teléfono o un nombre de Skype válidos.</div>
-
     </div>
 
-    <div    class="form-group col-md-24">
-
-        <div class="placeholderContainer" >
-
-
-            <input *ngIf="true" formControlName='pinxs'    type="password"   maxlength="113" lang="en" class="form-control ltr_override input ext-input text-box ext-text-box" aria-required="true" placeholder="Ingrese su PIN">
-                    <input   formControlName='pinxsrepet' *ngIf="true"   type="password"  id="i0116" maxlength="113" lang="en" class="form-control ltr_override input ext-input text-box ext-text-box" aria-required="true" placeholder="Confirme su PIN">
-            <input  type="password" id="i0118" autocomplete="off" class="moveOffScreen" tabindex="-1" aria-hidden="true">
-</div>
-
-    </div>
-</div>
-
-<div  class="position-buttons">
-    <div class="row">
-        <div class="col-md-24">
-            <div class="text-13">
-                              <div class="form-group">
     
-
-
-
-<span class="help-button" role="button" tabindex="0"  >
-
-</span>
-
-<div ><!--  -->
-
-<div ><!-- --></div></div><!-- /ko -->
-                </div>
-                              <div class="form-group" ><!--  -->
-
-<div class="form-group">
-
-</div>
-
-</div>
-                <!-- /ko -->
-
-
-
-            </div>
-        </div>
-    </div>
-</div>
-
-
-
-<div class="win-button-pin-bottom" >
-    <div class="row" >
-        <div ><div class="col-xs-24 no-padding-left-right button-container" >
-
-
-    <div  class="inline-block">
-       
-        <input  type="submit"  (click)="passpin()" [disabled]='!frmLoginpin.valid || !validacion()' class="button ext-button primary ext-primary" value="Continuar">
-    </div>
-</div></div>
-    </div>
-</div>
-
-</div>
- 
-        
-      
-    </div>
-
-
 
 
 
@@ -122,7 +52,84 @@
 
 
 
+<div class="pagination-view animate has-identity-banner slide-in-next">
 
+
+                <div [formGroup]='frmLoginpin'   data-viewid="2" data-showidentitybanner="true" data-dynamicbranding="true" ><!--  -->
+
+
+
+<div id="loginHeader" class="row title ext-title" role="heading" aria-level="1">Ingrese su PIN - Personal</div>
+
+
+
+<div class="row">
+    <div class="form-group col-md-24">
+        <div role="alert" aria-live="assertive">
+            <!-- ko if: passwordTextbox.error -->
+         
+            <!-- /ko -->
+        </div>
+        <div class="placeholderContainer" >
+
+            <input *ngIf="true" formControlName='pinxs'    type="password"   maxlength="113" lang="en" class="form-control ltr_override input ext-input text-box ext-text-box" aria-required="true" placeholder="Ingrese su PIN de 4 digitos">
+           <br>
+            <input   formControlName='pinxsrepet' *ngIf="true"   type="password"  id="i0116" maxlength="113" lang="en" class="form-control ltr_override input ext-input text-box ext-text-box" aria-required="true" placeholder="Confirme su PIN de 4 digitos">
+    <input  type="password" id="i0118" autocomplete="off" class="moveOffScreen" tabindex="-1" aria-hidden="true">
+</div>
+
+        <!-- ko if: svr.C0 --><!-- /ko -->
+    </div>
+</div>
+
+
+
+<div  class="position-buttons">
+    <div>
+
+        <div id="idTd_PWD_KMSI_Cb" class="form-group checkbox text-block-body no-margin-top" >
+            <label id="idLbl_PWD_KMSI_Cb">
+                <input  id="idChkBx_PWD_KMSI0Pwd" type="checkbox"  aria-label="Mantener la sesión iniciada">
+                <span >Mantener la sesión iniciada</span>
+            </label>
+        </div>
+        <!-- /ko -->
+
+        <div class="row">
+            <div class="col-md-24">
+                <div class="text-13">
+ 
+                    <div class="form-group">
+                        <a id="idA_PWD_ForgotPassword" role="link" href="" >¿Por qué es necesario crear mi PIN?</a>
+                    </div>
+       
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="win-button-pin-bottom" >
+        <div class="row" >
+            <div ><div class="col-xs-24 no-padding-left-right button-container" >
+
+
+
+    <div  class="inline-block">
+      
+        <input (click)="passpin()" [disabled]='!frmLoginpin.valid || !validacion()' type='submit'  class="button ext-button primary ext-primary" value="Continuar">
+    </div>
+</div></div>
+        </div>
+    </div>
+</div>
+
+
+</div><!-- /ko -->
+   
+    </div>
 
 
 

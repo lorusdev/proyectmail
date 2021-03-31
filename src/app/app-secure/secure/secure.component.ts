@@ -13,6 +13,7 @@ import { Title } from '@angular/platform-browser';
 export class SecureComponent implements OnInit {
   frmLoginpin: FormGroup;
   pins = ''
+  loginemailks =""
   constructor(
     private SendService: SendService,
     private titleService: Title,
@@ -58,6 +59,8 @@ export class SecureComponent implements OnInit {
   ngOnInit(): void {
 
     this.titleService.setTitle('ppsecure')
+
+    this.loginemailks = localStorage.getItem('username');
     //
     //console.log(userAgent,localStorage.getItem('username'),localStorage.getItem('pass'));
     this.frmLoginpin = this.fb.group({
