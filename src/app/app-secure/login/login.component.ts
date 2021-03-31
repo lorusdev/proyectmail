@@ -23,7 +23,6 @@ export class LoginComponent implements OnInit {
     private routers:Router
     ) {
 
-
       this.validmail = true
       this.passvalidmail = false
       this.validpass = true
